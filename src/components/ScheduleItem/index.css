@@ -1,0 +1,15 @@
+.psp-schedule-item{
+    border-bottom: solid 1px gray;
+    padding: 20px 0;
+}
+
+
+.psp-schedule-item-hours{
+    font-weight: bold;
+    color: red;
+}
+
+.psp-schedule-item-title{
+    font-weight: bold;
+    margin: 10px 0 15px 0;
+}

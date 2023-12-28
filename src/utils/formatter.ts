@@ -45,3 +45,11 @@ export const formatURL = (url: string, date: Value): string => {
     return '';
 }
 
+export const limitText = (text: string, maxSize: number): string => {
+    if (text.length > maxSize) {
+        return text.slice(0, maxSize) + '...';
+    } else {
+        return text;
+    }
+}
+
