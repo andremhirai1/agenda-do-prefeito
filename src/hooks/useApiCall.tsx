@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react';
 import { ApiResponse } from '../types';
+import { API_USERNAME, API_PASSWORD } from '../config';
 
 
 function useApiCall(url: string) {
     const [data, setData] = useState<ApiResponse | null>(null);
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(true);
-    
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                
+
                 const response = await fetch(url, {
                     headers: {
-                        'Authorization': 'Basic ' + btoa('test@liferay.com:test')
+                        'Authorization': 'Basic ' + btoa(`${API_USERNAME}:${API_PASSWORD}`)
                     }
                 });
                 if (!response.ok) {
