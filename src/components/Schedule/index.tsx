@@ -24,9 +24,17 @@ const Schedule = ({ date, items, loading, onChange }: { items: Item[], date: Val
             <h2>Agenda do prefeito</h2>
             <h3>{formatExtendedDate(date)}</h3>
             {!loading ?
-                (<div>
-                    {items.map(item => <ScheduleItem key={item.id} item={item} />)}
-                </div>)
+                (
+                    <div>
+                        {items.length > 0 ? (
+                            <div>
+                                {items.map(item => <ScheduleItem key={item.id} item={item} />)}
+                            </div>
+                        ) : (
+                            <p>Não há eventos para a data selecionada.</p>
+                        )}
+                    </div>
+                )
                 :
                 <div>
                     {Array.from({ length: 5 }, (_, idx) => (
