@@ -11,12 +11,12 @@ import 'react-loading-skeleton/dist/skeleton.css'
 const Schedule = ({ date, items, loading, onChange }: { items: Item[], date: Value, loading: boolean, onChange: React.Dispatch<React.SetStateAction<Value>> }) => {
 
     const handleDayClick = (type: string = "INCREMENT") => {
-        if (date instanceof Date) {
-            const nextDay = new Date(date);
-            if (type === "INCREMENT") nextDay.setDate(date.getDate() + 1);
-            else nextDay.setDate(date.getDate() - 1);
-            onChange(nextDay);
-        }
+        if (!(date instanceof Date)) return;
+
+        const increment = type === "INCREMENT" ? 1 : -1;
+        const nextDay = new Date(date);
+        nextDay.setDate(date.getDate() + increment);
+        onChange(nextDay);
     };
 
     return (
