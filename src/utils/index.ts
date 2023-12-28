@@ -1,1 +1,1 @@
-export { formatExtendedDate, formatURL } from './formatter';
+export { formatExtendedDate, formatHours, formatURL } from './formatter';

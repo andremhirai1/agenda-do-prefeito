@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Calendar from './components/Calendar';
+import Schedule from './components/Schedule';
 import './App.css';
 import { Value } from './types';
 import useApiCall from './hooks/useApiCall';
@@ -12,9 +13,9 @@ function App() {
   const { data, error, loading } = useApiCall(formatURL(API_URL, value));
 
   return (
-    <div className="App">
+    <div className="psp-calendar-app">
+      <Schedule date={value} items={data?.items || []} />
       <Calendar onChange={onChange} value={value} />
-      {data?.items.map(item => <li key={item.id}>{item.title}</li>)}
     </div>
   );
 }
