@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
 import { Value } from '../../types';
@@ -11,7 +12,7 @@ interface Props {
 const Calendario = ({ onChange, value }: Props) => {
     return (
         <div>
-            <Calendar onChange={onChange} value={value} locale="pt-BR" />
+            <Calendar className="psp-calendar" onChange={onChange} value={value} locale="pt-BR" />
         </div>
     );
 }

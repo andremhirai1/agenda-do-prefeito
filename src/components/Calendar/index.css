@@ -1,0 +1,28 @@
+.psp-calendar{
+    border-radius: 10px;
+    border: 1px solid #F4F5F7 !important;
+}
+
+.psp-calendar .react-calendar__viewContainer{
+    background: #F4F5F7;
+    border-radius: 0 0 10px 10px;
+}
+
+.psp-calendar .react-calendar__tile--active, .psp-calendar .react-calendar__tile--active:hover, .psp-calendar .react-calendar__tile--active:focus{
+    background: red !important;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px -3px rgba(255, 55, 75, 0.35);
+}
+
+.psp-calendar .react-calendar__month-view__weekdays{
+    background: white;
+}
+.psp-calendar .react-calendar__month-view__weekdays__weekday abbr{
+    color: #c5c8ca;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.psp-calendar .react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
+    border-radius: 10px;
+}
