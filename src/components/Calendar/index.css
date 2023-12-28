@@ -26,3 +26,8 @@
 .psp-calendar .react-calendar__tile:enabled:hover, .react-calendar__tile:enabled:focus {
     border-radius: 10px;
 }
+
+.psp-calendar .react-calendar__tile--now,  .psp-calendar .react-calendar__tile--now:focus, .psp-calendar .react-calendar__tile--now:hover {
+    background: #ffb2b2 !important;
+    border-radius: 10px;
+}
