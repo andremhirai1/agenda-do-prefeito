@@ -4,3 +4,7 @@
   max-width: 1280px;
   margin: 30px auto;
 }
+
+.psp-calendar-app>div:first-child{
+  flex-basis: 70%;
+}

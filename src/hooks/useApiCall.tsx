@@ -10,6 +10,8 @@ function useApiCall(url: string) {
     useEffect(() => {
         const fetchData = async () => {
             try {
+                setLoading(true);
+                
                 const response = await fetch(url, {
                     headers: {
                         'Authorization': 'Basic ' + btoa('test@liferay.com:test')
