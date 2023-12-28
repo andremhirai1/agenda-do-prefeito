@@ -8,12 +8,6 @@
     border-radius: 0 0 10px 10px;
 }
 
-.psp-calendar .react-calendar__tile--active, .psp-calendar .react-calendar__tile--active:hover, .psp-calendar .react-calendar__tile--active:focus{
-    background: red !important;
-    border-radius: 10px;
-    box-shadow: 0 7px 10px -3px rgba(255, 55, 75, 0.35);
-}
-
 .psp-calendar .react-calendar__month-view__weekdays{
     background: white;
 }
@@ -30,4 +24,10 @@
 .psp-calendar .react-calendar__tile--now,  .psp-calendar .react-calendar__tile--now:focus, .psp-calendar .react-calendar__tile--now:hover {
     background: #ffb2b2 !important;
     border-radius: 10px;
+}
+
+.psp-calendar .react-calendar__tile--active, .psp-calendar .react-calendar__tile--active:hover, .psp-calendar .react-calendar__tile--active:focus{
+    background: red !important;
+    border-radius: 10px;
+    box-shadow: 0 7px 10px -3px rgba(255, 55, 75, 0.35);
 }
