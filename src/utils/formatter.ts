@@ -1,5 +1,25 @@
 import { Value } from "../types";
 
+
+export const formatExtendedDate = (date: Value): string => {
+    if (date instanceof Date) {
+        const dateFormatOptions: Intl.DateTimeFormatOptions = {
+            weekday: 'long',
+            day: 'numeric',
+            month: 'long',
+            year: 'numeric'
+        };
+
+        const formatOfDate = new Intl.DateTimeFormat('pt-BR', dateFormatOptions);
+        const dataFormatada = formatOfDate.format(date);
+
+        return dataFormatada;
+    }
+
+    return "";
+}
+
+
 export const formatURL = (url: string, date: Value): string => {
     if (date instanceof Date) {
         const newUrl = new URL(url);
@@ -11,6 +31,7 @@ export const formatURL = (url: string, date: Value): string => {
 
         return newUrl.toString();
     }
-    
+
     return '';
 }
+
