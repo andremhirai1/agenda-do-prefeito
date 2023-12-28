@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
+import Calendar from './components/Calendar';
 import './App.css';
+import { Value } from './types';
+import useApiCall from './hooks/useApiCall';
+import { API_URL } from './config';
+import { formatURL } from './utils';
+
 
 function App() {
+  const [value, onChange] = useState<Value>(new Date());
+  const { data, error, loading } = useApiCall(formatURL(API_URL, value));
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Calendar onChange={onChange} value={value} />
+      {data?.items.map(item => <li key={item.id}>{item.title}</li>)}
     </div>
   );
 }
-
 export default App;
