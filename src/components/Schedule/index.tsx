@@ -1,4 +1,5 @@
 import React from 'react';
+import './index.css';
 import 'react-calendar/dist/Calendar.css';
 import { Item, Value } from '../../types';
 import { formatExtendedDate } from '../../utils';
@@ -19,10 +20,10 @@ const Schedule = ({ date, items, loading }: { items: Item[], date: Value, loadin
                 </div>)
                 :
                 <div>
-                    {Array.from({ length: 10 }, (_, idx) => (
+                    {Array.from({ length: 5 }, (_, idx) => (
                         <div className="psp-skeleton">
                             <Skeleton width={"30px"} />
-                            <Skeleton />
+                            <Skeleton height={"20px"} />
                             <Skeleton width={"150px"} />
                         </div>
                     ))}
