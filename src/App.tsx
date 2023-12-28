@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="psp-calendar-app">
-      <Schedule date={value} loading={loading} items={data?.items || []} />
+      <Schedule date={value} loading={loading} items={data?.items || []} onChange={onChange} />
       <Calendar onChange={onChange} value={value} />
     </div>
   );

@@ -1,8 +1,24 @@
-.psp-skeleton{
+.psp-skeleton {
     display: flex;
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
     border-bottom: solid 1px gray;
     padding: 20px 0;
+}
+
+.psp-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.psp-actions button{
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: red;
+    font-weight: bold;
+    cursor: pointer;
 }
