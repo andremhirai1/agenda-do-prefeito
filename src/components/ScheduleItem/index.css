@@ -1,17 +1,30 @@
 .psp-schedule-item{
-    border-bottom: solid 1px gray;
-    padding: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
 }
 
 
 .psp-schedule-item-hours{
     font-weight: bold;
-    color: red;
+    color: white;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    height: 80px;
+    min-width: 80px;
 }
 
 .psp-schedule-item-title{
     font-weight: bold;
-    margin: 10px 0 15px 0;
+    margin: 0 0 5px 0;
     display: block;
     color: black;
     text-decoration: none;

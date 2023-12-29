@@ -9,8 +9,10 @@ const ScheduleItem = ({ item }: { item: Item }) => {
     return (
         <div className='psp-schedule-item'>
             <span className='psp-schedule-item-hours'>{formatHours(item.startDate)}</span>
-            <a className='psp-schedule-item-title' href={`/l/${item.id}`}>{limitText(item.title, 200)}</a>
-            <span className='psp-schedule-item-location'>{item.location}</span>
+            <div>
+                <a className='psp-schedule-item-title' href={`/l/${item.id}`}>{limitText(item.title, 200)}</a>
+                <span className='psp-schedule-item-location'>{item.location}</span>
+            </div>
         </div>
     );
 }
