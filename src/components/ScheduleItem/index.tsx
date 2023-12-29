@@ -10,7 +10,7 @@ const ScheduleItem = ({ item }: { item: Item }) => {
         <div className='psp-schedule-item'>
             <span className='psp-schedule-item-hours'>{formatHours(item.startDate)}</span>
             <div>
-                <a className='psp-schedule-item-title' href={`/l/${item.id}`}>{limitText(item.title, 200)}</a>
+                <a className='psp-schedule-item-title' href={`/l/${item.id}`}>{limitText(item.title, 150)}</a>
                 <span className='psp-schedule-item-location'>{item.location}</span>
             </div>
         </div>
