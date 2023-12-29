@@ -1,13 +1,17 @@
 .psp-calendar-app {
   display: flex;
   flex-direction: column-reverse;
-  gap: 20px;
+  gap: 30px;
   max-width: 1280px;
   margin: 30px auto;
 }
 
 .psp-calendar-app>div:first-child {
   flex-basis: 100%;
+}
+
+.psp-calendar-app>div:last-child {
+  align-self: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -19,5 +23,9 @@
 
   .psp-calendar-app>div:first-child {
     flex-basis: 70%;
+  }
+
+  .psp-calendar-app>div:last-child {
+    align-self: flex-start;
   }
 }

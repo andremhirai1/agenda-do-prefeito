@@ -1,6 +1,7 @@
 .psp-calendar{
     border-radius: 10px;
     border: 1px solid #F4F5F7 !important;
+    margin-top: 30px;
 }
 
 .psp-calendar .react-calendar__viewContainer{
