@@ -1,3 +1,8 @@
+.psp-calendar-subtitle{
+  border-bottom: solid 1px red;
+  padding-bottom: 10px;
+}
+
 .psp-skeleton {
     display: flex;
     flex-direction: column;

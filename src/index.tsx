@@ -12,7 +12,7 @@ class WebComponent extends HTMLElement {
 
   connectedCallback() {
     ReactDOM.createRoot(this).render(
-      <App />
+      <App restrictFields={this.getAttribute('restrictFields')} />
     );
   }
 }

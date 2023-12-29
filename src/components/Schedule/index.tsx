@@ -21,8 +21,8 @@ const Schedule = ({ date, items, loading, onChange }: { items: Item[], date: Val
 
     return (
         <div>
-            <h2>Agenda do prefeito</h2>
-            <h3>{formatExtendedDate(date)}</h3>
+            <h2 className='psp-calendar-title'>Agenda do prefeito</h2>
+            <h3 className='psp-calendar-subtitle'>{formatExtendedDate(date)}</h3>
             {!loading ?
                 (
                     <div>

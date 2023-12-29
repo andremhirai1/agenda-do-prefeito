@@ -8,9 +8,11 @@ import { API_URL } from './config';
 import { formatURL } from './utils';
 
 
-function App() {
+function App({ restrictFields }: { restrictFields: string | null }) {
   const [value, onChange] = useState<Value>(new Date());
   const { data, error, loading } = useApiCall(formatURL(API_URL, value));
+
+  console.log(restrictFields);
 
   return (
     <div className="psp-calendar-app">
