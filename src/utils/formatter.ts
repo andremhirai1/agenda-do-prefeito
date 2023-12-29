@@ -23,7 +23,7 @@ export const formatExtendedDate = (date: Value): string => {
 export const formatHours = (date: string): string => {
     const newDate = new Date(date);
 
-    return `${newDate.getHours()}${newDate.getMinutes() ? `:${newDate.getMinutes()}` : ''}h`;
+    return `${newDate.getHours() + 3}${newDate.getMinutes() ? `:${newDate.getMinutes()}` : ''}h`;
 }
 
 
