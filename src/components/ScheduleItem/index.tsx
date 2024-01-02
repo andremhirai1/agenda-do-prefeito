@@ -7,13 +7,13 @@ import { formatHours, limitText } from '../../utils';
 
 const ScheduleItem = ({ item }: { item: Item }) => {
     return (
-        <div className='psp-schedule-item'>
+        <a className='psp-schedule-item' href={`/l/${item.id}`}>
             <span className='psp-schedule-item-hours'>{formatHours(item.startDate)}</span>
             <div>
-                <a className='psp-schedule-item-title' href={`/l/${item.id}`}>{limitText(item.title, 150)}</a>
+                <span className='psp-schedule-item-title'>{limitText(item.title, 150)}</span>
                 <span className='psp-schedule-item-location'>{item.location}</span>
             </div>
-        </div>
+        </a>
     );
 }
 

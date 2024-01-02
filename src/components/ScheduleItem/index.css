@@ -5,12 +5,12 @@
     margin-bottom: 20px;
     display: flex;
     gap: 15px;
+    text-decoration: none !important;
 }
-
 
 .psp-schedule-item-hours{
     font-weight: bold;
-    color: #E2001A;
+    color: #E2001A !important;
     background: #F4F5F7;
     display: flex;
     align-items: center;
@@ -21,6 +21,10 @@
     height: 80px;
     min-width: 80px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+.psp-schedule-item span{
+    color: black;
 }
 
 .psp-schedule-item-title{
