@@ -48,7 +48,7 @@ const Schedule = ({ date, items, loading, onChange }: { items: Item[], date: Val
                     </div>}
             </div>
             <div className='psp-actions'>
-                <button onClick={() => handleDayClick("DECREMENT")}>&lt; Dia anterior</button>
+                <button onClick={() => handleDayClick("DECREMENT")}><span className='arrow-left'></span> <span>Dia anterior</span></button>
                 <button onClick={() => handleDayClick("INCREMENT")}>Dia seguinte &gt;</button>
             </div>
         </div>

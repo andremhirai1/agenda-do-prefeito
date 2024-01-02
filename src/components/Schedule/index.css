@@ -27,4 +27,7 @@
     color: red;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }

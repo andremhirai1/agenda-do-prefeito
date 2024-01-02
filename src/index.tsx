@@ -11,7 +11,7 @@ class WebComponent extends HTMLElement {
 
   connectedCallback() {
     ReactDOM.createRoot(this).render(
-      <App restrictFields={this.getAttribute('restrictFields')} />
+      <App siteID={this.getAttribute('siteID')} />
     );
   }
 }
