@@ -10,9 +10,7 @@ import { formatURL } from './utils';
 
 function App({ siteID }: { siteID: string | null }) {
   const [value, onChange] = useState<Value>(new Date());
-  const { data, error, loading } = useApiCall(formatURL(API_URL, value));
-
-  console.log(siteID);
+  const { data, error, loading } = useApiCall(formatURL(API_URL, value, siteID));
 
   return (
     <div className="psp-calendar-app">

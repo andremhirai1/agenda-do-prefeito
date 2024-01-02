@@ -27,7 +27,7 @@ export const formatHours = (date: string): string => {
 }
 
 
-export const formatURL = (url: string, date: Value): string => {
+export const formatURL = (url: string, date: Value, siteID: string | null): string => {
     if (date instanceof Date) {
         const newUrl = new URL(url);
         const day = date.getDate() < 10 ? '0' + date.getDate() : date.getDate();
@@ -36,7 +36,7 @@ export const formatURL = (url: string, date: Value): string => {
         const minDate = `${formattedDate}T00:00:00Z`;
         const maxDate = `${formattedDate}T23:59:59Z`;
 
-        newUrl.searchParams.append('filter', `startDate gt ${minDate} and endDate lt ${maxDate}`);
+        newUrl.searchParams.append('filter', `startDate gt ${minDate} and endDate lt ${maxDate} ${siteID ? 'and siteID eq' + siteID : ''}`);
         newUrl.searchParams.append('sort', 'startDate:asc');
 
         return newUrl.toString();
