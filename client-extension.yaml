@@ -1,0 +1,15 @@
+assemble:
+    - from: build/static
+      into: static
+custom-calendar-prefeitura:
+    cssURLs:
+        - css/main.*.css
+    friendlyURLMapping: custom-calendar-prefeitura
+    htmlElementName: custom-calendar
+    instanceable: false
+    name: Agenda do prefeito
+    portletCategoryName: category.client-extensions
+    type: customElement
+    urls:
+        - js/main.*.js
+    useESM: true
